@@ -1,4 +1,5 @@
 set autoindent
+set smartindent
 set expandtab "tab to space
 set shiftround
 set shiftwidth=4
@@ -36,9 +37,23 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'petertriho/nvim-scrollbar'
 "color scheme
 Plug 'jacoborus/tender.vim'
+"color bracket
+Plug 'luochen1990/rainbow'
+"git
+Plug 'airblade/vim-gitgutter'
+"status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 call plug#end()
 
+"rainbow
+let g:rainbow_active = 1
+
+"status
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
