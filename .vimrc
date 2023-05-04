@@ -57,3 +57,17 @@ let g:rainbow_active = 1
 "status
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+
+noremap <A-j> :bprev<CR>
+noremap <A-k> :bnext<CR>
+noremap <A-c> :bdelete<CR>
+noremap <A-,> :bfirst<CR>
+noremap <A-.> :blast<CR>
+
+augroup keep_folds
+    autocmd!
+    "for keep fold
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
+augroup END
+
