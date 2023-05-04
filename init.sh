@@ -4,4 +4,5 @@
 # brew install neovim
 
 ln -sf ${PWD}/.vimrc ~/.vimrc 
+ln -sf ${PWD}/git/config ~/.gitconfig 
 
